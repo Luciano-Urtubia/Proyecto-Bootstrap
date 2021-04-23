@@ -1,0 +1,23 @@
+.jumbotron {
+    border-end-end-radius: 0.4rem;
+    /*border-radius: 0;*/
+}
+
+.carousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.footer {
+    background-color: #c8d0d8;
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: white;
+}
