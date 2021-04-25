@@ -11,8 +11,3 @@
 #galeria img:hover {
     border: 5px solid #f7f7f7;
 }
-
-.carousel {
-    width: 1200px;
-    height: 500px;
-}
