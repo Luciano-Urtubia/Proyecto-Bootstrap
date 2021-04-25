@@ -9,15 +9,16 @@
     border-radius: 50%;
 }
 
-.footer {
-    background-color: #c8d0d8;
-    color: white;
+#galeria .col-lg-4 {
+    margin: 0%;
+    padding: 25px;
 }
 
-.footer a {
-    color: white;
+#galeria img {
+    width: 100;
+    height: 250;
 }
 
-.footer a:hover {
-    color: white;
+#galeria img:hover {
+    border: 5px solid #f7f7f7;
 }
