@@ -11,3 +11,9 @@
 #galeria img:hover {
     border: 5px solid #f7f7f7;
 }
+
+.carousel .carousel-indicators li {
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+}
