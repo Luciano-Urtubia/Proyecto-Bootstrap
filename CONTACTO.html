@@ -79,10 +79,138 @@
         <h1 class="display-8">VISIONTEC compras e informaciopn de articulos tecnologicos</h1>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id est hic nesciunt nam et alias itaque assumenda iste placeat adipisci?</p>
 
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
 
+    <main class="container mt-4 mb-4">
+        <div class="row">
+            <div class="col-md-6">
+                <form action="#" method="GET" enctype="text/plain">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Ingresa tus datos a continuación...</h3>
+                        </div>
+                        <div class="card-body">
+                            <!--Agrupar componentes usando FORM-GROUP-->
+                            <div class="form-group">
+                                <label for="rut" class="font-weight-bold">Rut:</label>
+                                <input class="form-control" type="text" name="rut" id="rut" placeholder="Ej. 12345678-9" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre" class="font-weight-bold">Nombre:</label>
+                                <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Ej. Sacaría Flores del Campo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fecha_nacimiento" class="font-weight-bold">Fecha nacimiento:</label>
+                                <input class="form-control" type="date" name="fecha_nacimiento" id="fecha_nacimiento">
+                            </div>
 
+                            <!--Agrupar componentes usando FORM-GROUP ROW-->
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-5 col-form-label font-weight-bold">Email:</label>
+                                <div class="col-sm-7">
+                                    <input class="form-control" type="email" name="email" id="email" placeholder="Ej. correo@correo.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password" class="col-sm-5 col-form-label font-weight-bold">Contraseña:</label>
+                                <div class="col-sm-7">
+                                    <input class="form-control" type="password" name="password" id="password" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="confirm-password" class="col-sm-5 col-form-label font-weight-bold">Confirmar contraseña:</label>
+                                <div class="col-sm-7">
+                                    <input class="form-control" type="password" name="confirm-password" id="confirm-password" placeholder="Ej. correo@correo.com" required>
+                                </div>
+                            </div>
+                            <!--Radiobutton-->
+                            <div class="form-group row">
+                                <label for="genero" class="col-sm-5 col-form-label font-weight-bold ">Seleccione su género:</label>
+                                <div class="col-sm-7">
+                                    <div class="form-check">
+                                        <div class="form-check-label">
+                                            <label for="masculino" class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino">Masculino
+                                            </label>
+                                        </div>
+                                        <div class="form-check-label">
+                                            <label for="femenino" class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="genero" id="femenino" value="femenino">Femenino
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Checkbok-->
+                            <div class="form-group">
+                                <label for="deportes" class="font-weight-bold">Deportes que practicas:</label>
+                                <div class="form-check">
+                                    <div class="form-check-label">
+                                        <label for="ciclismo" class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" name="ciclismo" id="ciclismo" value="ciclismo">Ciclismo
+                                        </label>
+                                    </div>
+                                    <div class="form-check-label">
+                                        <label for="montanismo" class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" name="montanismo" id="montanismo" value="montanismo">Montañismo
+                                        </label>
+                                    </div>
+                                    <div class="form-check-label">
+                                        <label for="natacion" class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" name="natacion" id="natacion" value="natacion">Natación
+                                        </label>
+                                    </div>
+                                    <div class="form-check-label">
+                                        <label for="rayuela_corta" class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" name="rayuela_corta" id="rayuela_corta" value="rayuela_corta">Rayuela
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Select o Combobox -->
+                            <div class="form-group">
+                                <label for="comuna" class="font-weight-bold">Comuna:</label>
+                                <select name="comuna" id="comuna" class="form-control">
+                                    <option value="Santiago">Santiago</option>
+                                    <option value="Macul">Macul</option>
+                                    <option value="Ñuñoa">Ñuñoa</option>
+                                    <option value="Puente Alto">Puente Alto</option>
+                                    <option value="San Miguel">San Miguel</option>
+                                    <option value="San Joaquín">San Joaquín</option>
+                                </select>
+                            </div>
+
+                            <!-- Textarea -->
+                            <div class="form-group">
+                                <label for="comentarios" class="font-weight-bold">Comentarios:</label>
+                                <textarea class="form-control" name="comentarios" id="comentarios" rows="5"></textarea>
+                            </div>
+
+                            <!-- Toogle button o Switch -->
+                            <div class="form-group">
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input" type="checkbox" name="aceptar_terminos" id="aceptar_terminos" required>
+                                    <label for="aceptar_terminos" class="custom-control-label">Aceptar los términos del contrato.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <!-- Botones -->
+                            <div class="form-group">
+                                <input class="btn btn-primary" type="submit" value="Registrar" id="registrar">
+                                <input class="btn btn-danger" type="reset" value="Cancelar" id="cancelar">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img class="d-none d-md-block" src="http://picsum.photos/500/1000" alt="Imagen costado form" width="100%" height="100%">
+            </div>
+        </div>
+    </main>
 
     <!-- Footer Section -->
     <footer class="footer mt-4 py-4 bg-primary">
