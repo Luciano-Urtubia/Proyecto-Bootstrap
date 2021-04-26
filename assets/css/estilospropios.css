@@ -9,7 +9,7 @@
 }
 
 #galeria img:hover {
-    border: 5px solid #d80606;
+    border: 5px solid #6414f8;
 }
 
 .footer {
@@ -26,6 +26,6 @@
 }
 
 .card {
-    grid-template-columns: 300px;
-    grid-template-rows: 210px 210px 80px;
+    width: 100%;
+    height: 250px;
 }
