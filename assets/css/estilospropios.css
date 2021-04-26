@@ -14,11 +14,11 @@
 
 .footer {
     background-color: #343a40;
-    color: white;
+    color: rgb(73, 11, 243);
 }
 
 .footer a {
-    color: rgb(20, 54, 245);
+    color: rgb(238, 239, 248);
 }
 
 .footer a:hover {
