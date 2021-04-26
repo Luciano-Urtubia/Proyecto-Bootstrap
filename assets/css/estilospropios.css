@@ -11,3 +11,16 @@
 #galeria img:hover {
     border: 5px solid #f7f7f7;
 }
+
+.footer {
+    background-color: #343a40;
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: #007bff;
+}
