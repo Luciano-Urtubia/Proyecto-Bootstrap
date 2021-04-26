@@ -9,7 +9,7 @@
 }
 
 #galeria img:hover {
-    border: 5px solid #6414f8;
+    border: 5px solid #007bff;
 }
 
 .footer {
@@ -23,4 +23,8 @@
 
 .footer a:hover {
     color: #007bff;
+}
+
+#card img:hover {
+    border: 5px solid #007bff;
 }
