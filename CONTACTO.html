@@ -23,28 +23,7 @@
     <title>visiontec</title>
 
 
-    <script>
-        var nombre = document.getElementById('nombre');
-        var rut = document.getElementById('rut')
-        var error = document.getElementById('error');
-        error.style.color = 'red';
 
-        function enviarFormulario() {
-            console.log('Enviando formulario,,,');
-            var mensajeError = [];
-            if (nombre.value === null || nombre.value === '') {
-                mensajeError.push('Ingresa tu nombre');
-            }
-
-            if (rut.value === null || nombre.value === '') {
-                mensajeError.push('Ingresa tu rut');
-            }
-
-            error.innerHTML = mensajeError.join(', ');
-            return false;
-
-        }
-    </script>
 
 
 </head>
@@ -116,7 +95,7 @@
     <main class="container mt-4 mb-4">
         <div class="row">
             <div class="col-md-12">
-                <form action="#" method="GET" enctype="text/plain">
+                <form action="" class="formulario" id="formulario">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Ingresa tus datos en esta seccion...</h3>
