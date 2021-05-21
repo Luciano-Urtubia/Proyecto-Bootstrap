@@ -59,7 +59,7 @@ main {
 }
 
 .formulario__grupo-input {
-    position: absolute;
+    position: relative;
 }
 
 .formulario__input {
