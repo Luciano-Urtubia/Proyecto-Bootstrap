@@ -53,7 +53,7 @@ main {
 }
 
 .formulario__grupo-input {
-    position: absolute;
+    position: relative;
 }
 
 A .formulario__input {
@@ -89,7 +89,7 @@ A .formulario__input {
     bottom: 15px;
     z-index: 100;
     font-size: 16px;
-    opacity: 0;
+    opacity: 1;
 }
 
 .formulario__checkbox {
