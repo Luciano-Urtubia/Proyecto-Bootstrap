@@ -53,10 +53,10 @@ main {
 }
 
 .formulario__grupo-input {
-    position: relative;
+    position: absolute;
 }
 
-.formulario__input {
+A .formulario__input {
     width: 100%;
     background: #fff;
     border: 3px solid transparent;
