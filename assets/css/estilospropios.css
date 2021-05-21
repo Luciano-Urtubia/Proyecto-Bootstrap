@@ -59,7 +59,7 @@ main {
 }
 
 .formulario__grupo-input {
-    position: relative;
+    position: absolute;
 }
 
 .formulario__input {
@@ -158,9 +158,6 @@ main {
     display: block;
 }
 
-
-/* ----- -----  Estilos para Validacion ----- ----- */
-
 .formulario__grupo-correcto .formulario__validacion-estado {
     color: #1ed12d;
     opacity: 1;
@@ -178,9 +175,6 @@ main {
 .formulario__grupo-incorrecto .formulario__input {
     border: 3px solid #bb2929;
 }
-
-
-/* ----- -----  Mediaqueries ----- ----- */
 
 @media screen and (max-width: 800px) {
     .formulario {
