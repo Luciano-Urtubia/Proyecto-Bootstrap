@@ -45,6 +45,12 @@ main {
     padding: 40px;
 }
 
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
 .formulario__label {
     display: block;
     font-weight: 700;
@@ -56,7 +62,7 @@ main {
     position: relative;
 }
 
-A .formulario__input {
+.formulario__input {
     width: 100%;
     background: #fff;
     border: 3px solid transparent;
