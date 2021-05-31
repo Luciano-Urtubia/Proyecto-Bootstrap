@@ -17,10 +17,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 
     <script src="../BOOTSTRAP/assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../Proyecto Evaluacion1/assets/js/validaciones.js">
 
 
     <link rel="stylesheet" href="assets/css/estilospropios.css">
     <title>visiontec</title>
+
+
+
+
+
 </head>
 
 <body>
@@ -87,156 +93,244 @@
 
     </div>
 
-    <main class="container mt-4 mb-4">
-        <div class="row">
-            <div class="col-md-12">
-                <form action="#" method="GET" enctype="text/plain">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Ingresa tus datos en esta seccion...</h3>
+
+    <main>
+
+        <div class="container mb-4">
+            <div class="row">
+
+                <form action="" class="formulario" id="formulario">
+
+
+
+
+
+                     <!-- Grupo: Nombre -->
+                    <div class="formulario__grupo" id="grupo__nombre">
+                        <label for="nombre" class="formulario__label">Nombre</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Juanito Perez Rojas">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
-                        <div class="card-body">
-                            <!--Agrupar componentes usando FORM-GROUP-->
-                            <div class="form-group">
-                                <label for="rut" class="font-weight-bold">Rut:</label>
-                                <input class="form-control" type="text" name="rut" id="rut" placeholder="Ej. 12345678-9" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="nombre" class="font-weight-bold">Nombre:</label>
-                                <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Ej. Nombre Nombre Apellido Apellido" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="fecha_nacimiento" class="font-weight-bold">Fecha nacimiento:</label>
-                                <input class="form-control" type="date" name="fecha_nacimiento" id="fecha_nacimiento">
-                            </div>
+                        <p class="formulario__input-error">Su nombre puede tener espacios y no admite simbolos ni numeros.</p>
+                    </div>
 
-                            <!--Aki se agrupa componentes usando FORM-GROUP ROW-->
-                            <div class="form-group row">
-                                <label for="email" class="col-sm-5 col-form-label font-weight-bold">Email:</label>
-                                <div class="col-sm-7">
-                                    <input class="form-control" type="email" name="email" id="email" placeholder="Ej. correo@correo.com" required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="password" class="col-sm-5 col-form-label font-weight-bold">Contraseña:</label>
-                                <div class="col-sm-7">
-                                    <input class="form-control" type="password" name="password" id="password" required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="confirm-password" class="col-sm-5 col-form-label font-weight-bold">Confirmar contraseña:</label>
-                                <div class="col-sm-7">
-                                    <input class="form-control" type="password" name="confirm-password" id="confirm-password" placeholder="Ej. correo@correo.com" required>
-                                </div>
-                            </div>
-                            <!--Radiobutton-->
-                            <div class="form-group row">
-                                <label for="genero" class="col-sm-5 col-form-label font-weight-bold ">Seleccione su género:</label>
-                                <div class="col-sm-7">
-                                    <div class="form-check">
-                                        <div class="form-check-label">
-                                            <label for="masculino" class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino">Masculino
-                                            </label>
-                                        </div>
-                                        <div class="form-check-label">
-                                            <label for="femenino" class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="genero" id="femenino" value="femenino">Femenino
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!--Checkbok-->
-                            <div class="form-group">
-                                <label for="deportes" class="font-weight-bold">Que imformacion de tecnologia es la que mas te gusta:</label>
-                                <div class="form-check">
-                                    <div class="form-check-label">
-                                        <label for="ciclismo" class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" name="ciclismo" id="ciclismo" value="ciclismo">Smartphone
-                                        </label>
-                                    </div>
-                                    <div class="form-check-label">
-                                        <label for="montanismo" class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" name="montanismo" id="montanismo" value="montanismo">Smartwatch
-                                        </label>
-                                    </div>
-                                    <div class="form-check-label">
-                                        <label for="natacion" class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" name="natacion" id="natacion" value="natacion">PC
-                                        </label>
-                                    </div>
-                                    <div class="form-check-label">
-                                        <label for="rayuela_corta" class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" name="rayuela_corta" id="rayuela_corta" value="rayuela_corta">Laptop
-                                        </label>
-                                    </div>
-                                    <div class="form-check-label">
-                                        <label for="ciclismo" class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" name="ciclismo" id="ciclismo" value="ciclismo">Tablet
-                                        </label>
-                                    </div>
-                                    <div class="form-check-label">
-                                        <label for="ciclismo" class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" name="ciclismo" id="ciclismo" value="ciclismo">Otros
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- Select o Combobox -->
-                            <div class="form-group">
-                                <label for="comuna" class="font-weight-bold">Comuna:</label>
-                                <select name="comuna" id="comuna" class="form-control">
-                                    <option value="Santiago">Santiago</option>
-                                    <option value="Macul">Macul</option>
-                                    <option value="Ñuñoa">Ñuñoa</option>
-                                    <option value="Puente Alto">Puente Alto</option>
-                                    <option value="San Miguel">San Miguel</option>
-                                    <option value="San Joaquín">Peñalolen</option>
-                                    <option value="San Joaquín">Maipu</option>
-                                    <option value="San Joaquín">Las condes</option>
-                                    <option value="San Joaquín">Vitacura</option>
-                                    <option value="San Joaquín">Lo barnechea</option>
-                                    <option value="San Joaquín">Providencia</option>
-                                    <option value="San Joaquín">La Reina</option>
-                                    <option value="San Joaquín">San Bernanrdo</option>
-                                    <option value="San Joaquín">Quillicura</option>
-                                    <option value="San Joaquín">Lampa</option>
-                                    <option value="San Joaquín">Renca</option>
-                                    <option value="San Joaquín">Lo Espejo</option>
-                                    <option value="San Joaquín">Quinta normal</option>
-                                </select>
-                            </div>
-
-                            <!-- Textarea -->
-                            <div class="form-group">
-                                <label for="comentarios" class="font-weight-bold">Comentarios:</label>
-                                <textarea class="form-control" name="comentarios" id="comentarios" rows="5"></textarea>
-                            </div>
-
-                            <!-- Toogle button o Switch -->
-                            <div class="form-group">
-                                <div class="custom-control custom-switch">
-                                    <input class="custom-control-input" type="checkbox" name="aceptar_terminos" id="aceptar_terminos" required>
-                                    <label for="aceptar_terminos" class="custom-control-label">Aceptar los términos del contrato.</label>
-                                </div>
-                            </div>
+                    <!-- Grupo: Usuario -->
+                    <div class="formulario__grupo" id="grupo__usuario">
+                        <label for="usuario" class="formulario__label">Usuario</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="123456789-0">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
-                        <div class="card-footer text-center">
-                            <!-- Botones -->
-                            <div class="form-group">
-                                <input class="btn btn-primary" type="submit" value="Registrar" id="registrar">
-                                <input class="btn btn-danger" type="reset" value="Cancelar" id="cancelar">
+                        <p class="formulario__input-error">Su rut  tiene que ser de 9 a 10 dígitos y solo puede contener numeros y  guion . Si termina en k remplazelo por un 0 </p>
+                    </div>
+
+
+
+                    <!-- Grupo: Contraseña -->
+                    <div class="formulario__grupo" id="grupo__password">
+                        <label for="password" class="formulario__label">Contraseña</label>
+                        <div class="formulario__grupo-input">
+                            <input type="password" class="formulario__input" name="password" id="password">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                    </div>
+
+                    <!-- Grupo: Contraseña 2 -->
+                    <div class="formulario__grupo" id="grupo__password2">
+                        <label for="password2" class="formulario__label">Repetir Contraseña</label>
+                        <div class="formulario__grupo-input">
+                            <input type="password" class="formulario__input" name="password2" id="password2">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+                    </div>
+
+                    <!-- Grupo: Correo Electronico -->
+                    <div class="formulario__grupo" id="grupo__correo">
+                        <label for="correo" class="formulario__label">Correo Electrónico</label>
+                        <div class="formulario__grupo-input">
+                            <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                    </div>
+
+                    <!-- Grupo: Teléfono -->
+                    <div class="formulario__grupo" id="grupo__telefono">
+                        <label for="telefono" class="formulario__label">Teléfono</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+                    </div>
+
+
+
+
+
+                    <!--grupo genero -->
+
+
+
+                    <div class="form-group row">
+                        <label for="genero" class="col-sm-5 col-form-label font-weight-bold ">Seleccione su género:</label>
+                        <div class="col-sm-7">
+                            <div class="form-check">
+                                <div class="form-check-label">
+                                    <label for="masculino" class="form-check-label">
+                                                    <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino">Masculino
+                                                </label>
+                                </div>
+                                <div class="form-check-label">
+                                    <label for="femenino" class="form-check-label">
+                                                    <input class="form-check-input" type="radio" name="genero" id="femenino" value="femenino">Femenino
+                                                </label>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!--Checkbok-->
+                    <div class="form-group">
+                        <label for="deportes" class="font-weight-bold">Que imformacion de tecnologia es la que mas te gusta:</label>
+                        <div class="form-check">
+                            <div class="form-check-label">
+                                <label for="ciclismo" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="ciclismo" id="ciclismo" value="ciclismo">Smartphone
+                                            </label>
+                            </div>
+                            <div class="form-check-label">
+                                <label for="montanismo" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="montanismo" id="montanismo" value="montanismo">Smartwatch
+                                            </label>
+                            </div>
+                            <div class="form-check-label">
+                                <label for="natacion" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="natacion" id="natacion" value="natacion">PC
+                                            </label>
+                            </div>
+                            <div class="form-check-label">
+                                <label for="rayuela_corta" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="rayuela_corta" id="rayuela_corta" value="rayuela_corta">Laptop
+                                            </label>
+                            </div>
+                            <div class="form-check-label">
+                                <label for="ciclismo" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="ciclismo" id="ciclismo" value="ciclismo">Tablet
+                                            </label>
+                            </div>
+                            <div class="form-check-label">
+                                <label for="ciclismo" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="ciclismo" id="ciclismo" value="ciclismo">Otros
+                                            </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Select o Combobox -->
+                    <div class="form-group">
+                        <label for="comuna" class="font-weight-bold">Comuna:</label>
+                        <select name="comuna" id="comuna" class="form-control">
+                                        <option value="Santiago">Santiago</option>
+                                        <option value="Macul">Macul</option>
+                                        <option value="Ñuñoa">Ñuñoa</option>
+                                        <option value="Puente Alto">Puente Alto</option>
+                                        <option value="San Miguel">San Miguel</option>
+                                        <option value="San Joaquín">Peñalolen</option>
+                                        <option value="San Joaquín">Maipu</option>
+                                        <option value="San Joaquín">Las condes</option>
+                                        <option value="San Joaquín">Vitacura</option>
+                                        <option value="San Joaquín">Lo barnechea</option>
+                                        <option value="San Joaquín">Providencia</option>
+                                        <option value="San Joaquín">La Reina</option>
+                                        <option value="San Joaquín">San Bernanrdo</option>
+                                        <option value="San Joaquín">Quillicura</option>
+                                        <option value="San Joaquín">Lampa</option>
+                                        <option value="San Joaquín">Renca</option>
+                                        <option value="San Joaquín">Lo Espejo</option>
+                                        <option value="San Joaquín">Quinta normal</option>
+                                    </select>
+
+
+
+                    </div>
+
+                    <!-- Textarea -->
+                    <div class="form-group">
+                        <label for="comentarios" class="font-weight-bold">Comentarios:</label>
+
+                        <textarea class="form-control" name="comentarios" id="comentarios" rows="5"></textarea>
+                    </div>
+
+
+                    <!---grupo terminos y condiciones -->
+
+                    <div class="formulario__grupo" id="grupo__terminos">
+                        <label class="formulario__label">
+                                        <input class= "formulario__checkbox" type="checkbox"  name="terminos" id="terminos">
+                                        Acepto los terminos y condiciones
+            
+                                    </label>
+
+                    </div>
+
+                    <!---mensaje de error -->
+
+                    <div class="formulario__mensaje" id="formulario__mensaje">
+                        <p> <i class="fas fa-exclamation-triangle"></i> <b>Error:</b>Por favor rellenar el formulario correctamente</p>
+                    </div>
+
+                    <!--boton aceptar -->
+
+                    <div class="formulario__grupo formulario__grupo-btn-enviar">
+                        <button type="submit" class="formulario__btn">Enviar</button>
+                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito"> Formulario enviado</p>
+
+                    </div>
+
+
+
+
+
+
+
+
                 </form>
+
+
+
             </div>
 
+
+
+
+
+
+
         </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
+
+
+    <!--------grupo  prueba -->
 
 
     <div class="container mb-4">
@@ -421,6 +515,8 @@
     <script src="../BOOTSTRAP/assets/js/jquery-3.5.1.slim.min.js"></script>
     <script src="../BOOTSTRAP/assets/js/popper.min.js"></script>
     <script src="../BOOTSTRAP/assets/js/bootstrap.min.js"></script>
+    <script src="../Proyecto Evaluacion1/assets/js/validaciones.js"></script>
+
 
 
 
