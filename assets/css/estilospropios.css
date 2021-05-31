@@ -45,11 +45,6 @@ main {
     padding: 40px;
 }
 
-.formulario {
-    display: grid;
-    gap: 20px;
-}
-
 .formulario__label {
     display: block;
     font-weight: 700;
