@@ -85,13 +85,36 @@
         <!--la parte de arriba de entrada de texto jumbotron -->
         <h2 class="display-7 ">VISIONTEC toda informacion de tus Smartphone favoritos </h2>
 
+         <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+
+    <script>
+        const colorSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+        function switchColor(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+            else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        }
+        colorSwitch.addEventListener('change', switchColor, false);
+
+    </script>
+
     </div>
 
 
 
 
 
-    <!--------------------------galeria 1------------------------ -->
+    <!---galeria 1-->
     <div class="container  ">
         <div id="galeria">
             <div class="text-center ">
@@ -133,7 +156,7 @@
 
 
     </div>
-    <!--------------------------galeria 2------------------------ -->
+    <!---galeria 2- -->
     <div class="container  ">
         <div id="galeria">
             <div class="text-center ">
@@ -211,7 +234,7 @@
     </div>
 
 
-    <!--------------------------galeria fin ------------------------ -->
+    <!---galeria fin  -->
 
 
 
@@ -274,7 +297,7 @@
                         </li>
                     </ul>
                 </div>
-                <!-- ----------------barra ingrese correo----------------------->
+                <!-- barra ingrese correo-->
 
                 <div class="col-sm-12 col-md-3  mt-4 mb-4">
                     <div class="card bg-primary text-light">
@@ -297,7 +320,7 @@
 
 
 
-                        <!-- -----------------redess sociales------------------->
+                        <!-redess sociales-->
                         <div class="card-footer text-center">
                             <a class="card-link" href="http://www.facebook.com" target="">
                                 <span style="font-size: 2em;">
