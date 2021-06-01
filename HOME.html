@@ -24,20 +24,6 @@
     <title>visiontec</title>
 
 
-    <script>
-        const colorSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-
-        function switchColor(e) {
-            if (e.target.checked) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-            }
-            else {
-                document.documentElement.setAttribute('data-theme', 'light');
-            }
-        }
-        colorSwitch.addEventListener('change', switchColor, false);
-
-    </script>
 
 </head>
 
@@ -117,13 +103,29 @@
         <a class="btn btn-primary btn-lg" href="CONTACTO.html" role="button">Registrate</a>
     </div>
 
-   <div class="theme-switch-wrapper">
+     <div class="theme-switch-wrapper">
         <label class="theme-switch" for="checkbox">
             <input type="checkbox" id="checkbox" />
             <div class="slider round"></div>
         </label>
         <small>Cambiar color</small>
     </div>
+
+
+    <script>
+        const colorSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+        function switchColor(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+            else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        }
+        colorSwitch.addEventListener('change', switchColor, false);
+
+    </script>
 
     <!-- section carrusel -->
     <div class="container mb-4">
