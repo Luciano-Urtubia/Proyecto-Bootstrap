@@ -196,6 +196,64 @@ main {
     }
 }
 
+:root {
+    --primary-color: #000000;
+    --bg-color: #ffffff;
+    --secondary-color: #000000;
+}
+
+[data-theme="dark"] {
+    --primary-color: #ffffff;
+    --bg-color: #000000;
+    --secondary-color: #ff3366;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: 'Muli', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    height: 100vh;
+    display: flex;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 6rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.heading {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    padding: 1.4rem 3rem;
+    border-radius: 5rem;
+    display: inline-block;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p {
+    font-size: 2rem;
+    line-height: 1.6;
+}
+
+section {
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
 .theme-switch-wrapper {
     position: absolute;
     top: 50px;
