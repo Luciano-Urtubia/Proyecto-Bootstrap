@@ -266,3 +266,8 @@ body {
     color: var(--primary-color);
     font-family: 'Muli', sans-serif;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #E5E5E5;
+}
