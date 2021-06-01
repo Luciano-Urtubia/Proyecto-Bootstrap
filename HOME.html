@@ -22,12 +22,21 @@
     <link rel="stylesheet" href="assets/css/estilospropios.css">
 
     <title>visiontec</title>
-  <script>   function apagarLuz() {
-    var colorOscuro = '#343a40';
-    var letraClara = '#ffffff';
-    document.body.style.background = colorOscuro;
-    document.body.style.color = letraClara;
-}  </script>
+   <script>
+        const colorSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+        function switchColor(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+            else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        }
+        colorSwitch.addEventListener('change', switchColor, false);
+
+    </script>
+
 
 </head>
 
@@ -85,7 +94,15 @@
             </form>
 
 
-              <button class="btn btn-success" type="button" onclick="apagarLuz()">Apagar la luz</button>
+            <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <small>Cambiar color</small>
+    </div>
+
+
 
         </div>
     </nav>
