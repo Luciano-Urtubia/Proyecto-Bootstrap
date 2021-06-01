@@ -306,8 +306,8 @@ body {
 .reloj {
     font-family: Oswald, Arial;
     width: 100%;
-    padding: 20px;
-    font-size: 1em;
+    padding: 10px;
+    font-size: 4em;
     text-align: center;
     background: rgba(0, 0, 0, .5);
 }
