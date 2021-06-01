@@ -260,3 +260,9 @@ input:checked+.slider:before {
 .slider.round:before {
     border-radius: .25rem;
 }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: 'Muli', sans-serif;
+}
