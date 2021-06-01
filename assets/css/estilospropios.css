@@ -59,7 +59,7 @@ main {
 
 .formulario__input {
     width: 100%;
-    background: #fff;
+    background: rgb(167, 161, 161);
     border: 3px solid transparent;
     border-radius: 3px;
     height: 45px;
@@ -263,6 +263,6 @@ input:checked+.slider:before {
 
 body {
     background-color: var(--bg-color);
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-family: 'Muli', sans-serif;
 }
