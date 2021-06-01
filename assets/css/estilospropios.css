@@ -278,7 +278,7 @@ body {
 .wrap {
     width: 90%;
     max-width: 1000px;
-    /*margin:auto;*/
+    margin: auto;
 }
 
 .widget {
@@ -307,7 +307,7 @@ body {
     font-family: Oswald, Arial;
     width: 100%;
     padding: 20px;
-    font-size: 4em;
+    font-size: 1em;
     text-align: center;
     background: rgba(0, 0, 0, .5);
 }
