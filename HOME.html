@@ -401,7 +401,20 @@
     <script src="../BOOTSTRAP/assets/js/jquery-3.5.1.slim.min.js"></script>
     <script src="../BOOTSTRAP/assets/js/popper.min.js"></script>
     <script src="../BOOTSTRAP/assets/js/bootstrap.min.js"></script>
+ <script>
+        const colorSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
+        function switchColor(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+            else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        }
+        colorSwitch.addEventListener('change', switchColor, false);
+
+    </script>
 
 
 
