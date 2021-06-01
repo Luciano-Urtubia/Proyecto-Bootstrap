@@ -278,11 +278,11 @@ body {
 .wrap {
     width: 90%;
     max-width: 1000px;
-    /*margin:auto;*/
+    margin: auto;
 }
 
 .widget {
-    width: 40%;
+    width: 10%;
     margin: 2em;
     /*margin:32px; */
 }
