@@ -263,7 +263,6 @@ input:checked+.slider:before {
 
 body {
     background-color: var(--bg-color);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-family: 'Muli', sans-serif;
-    background: #857676;
 }
