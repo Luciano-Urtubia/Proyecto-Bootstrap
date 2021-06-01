@@ -22,6 +22,13 @@
     <link rel="stylesheet" href="assets/css/estilospropios.css">
 
     <title>visiontec</title>
+  <script>   function apagarLuz() {
+    var colorOscuro = '#343a40';
+    var letraClara = '#ffffff';
+    document.body.style.background = colorOscuro;
+    document.body.style.color = letraClara;
+}  </script>
+
 </head>
 
 <body>
@@ -76,6 +83,10 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
+
+
+              <button class="btn btn-success" type="button" onclick="apagarLuz()">Apagar la luz</button>
+
         </div>
     </nav>
 
