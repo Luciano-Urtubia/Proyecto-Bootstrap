@@ -196,8 +196,20 @@ main {
     }
 }
 
+:root {
+    --primary-color: #000000;
+    --bg-color: #ffffff;
+    --secondary-color: #000000;
+}
+
+[data-theme="dark"] {
+    --primary-color: #ffffff;
+    --bg-color: #000000;
+    --secondary-color: #ff3366;
+}
+
 .theme-switch-wrapper {
-    position: relative;
+    position: absolute;
     top: 50px;
     left: 50%;
     transform: translate(-50%, -50%);
