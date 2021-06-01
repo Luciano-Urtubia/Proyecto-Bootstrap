@@ -86,9 +86,31 @@
     <div class="jumbotron bg-secondary text-light ">
         <!--la parte de arriba de entrada de texto jumbotron -->
         <h2 class="display-7 ">VISIONTEC toda informacion de tus Eventos favoritos </h2>
+         <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
     </div>
 
-    <!-- ---------------------------------------------------------->
+
+    <script>
+        const colorSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+        function switchColor(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+            else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        }
+        colorSwitch.addEventListener('change', switchColor, false);
+
+    </script>
+    </div>
+
+   
 
 
 
@@ -112,7 +134,7 @@
         </div>
     </div>
 
-    <!-- ----------------------------------------------ventanas modales------------------------------ -->
+    <!-- -ventanas modales -->
 
 
     <div class="container">
@@ -146,7 +168,6 @@
 
 
 
-    <!-- ---------------------------------------------------------->
 
     <div class="container">
         <h3 class="display-3">Fechas Importantes En Tu Region</h3>
@@ -216,7 +237,7 @@
         </div>
     </div>
 
-    <!-- ----------------------------------------------ventanas modales------------------------------ -->
+    <!-- ventanas modales -->
 
 
     <div class="container">
@@ -250,7 +271,6 @@
 
 
 
-    <!-- ---------------------------------------------------------->
 
     <div class="container">
         <h3 class="display-3">Fechas Importantes En Tu Region</h3>
@@ -319,7 +339,7 @@
         </div>
     </div>
 
-    <!-- ----------------------------------------------ventanas modales------------------------------ -->
+    <!-- ventanas modales -->
 
 
     <div class="container">
@@ -354,7 +374,7 @@
 
 
 
-    <!-- ---------------------------------------------------------->
+  
 
     <div class="container">
         <h3 class="display-3">Fechas Importantes En Tu Region</h3>

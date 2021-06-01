@@ -91,6 +91,28 @@
         <h2 class="display-7 ">VISIONTEC registrate y obten los veneficios de nuestro web site </h2>
         <p class="lead">Las suscripcion te permite obtar a entradas de enventos exclusivos presenciales o striming</p>
 
+ <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+
+    <script>
+        const colorSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+        function switchColor(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+            else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        }
+        colorSwitch.addEventListener('change', switchColor, false);
+
+    </script>
     </div>
 
 
@@ -330,7 +352,7 @@
     </main>
 
 
-    <!--------grupo  prueba -->
+    <!--grupo  prueba -->
 
 
     <div class="container mb-4">
@@ -445,7 +467,7 @@
                         </li>
                     </ul>
                 </div>
-                <!-- ----------------barra ingrese correo----------------------->
+                <!-- -barra ingrese correo-->
 
                 <div class="col-sm-12 col-md-3  mt-4 mb-4">
                     <div class="card bg-primary text-light">
@@ -468,7 +490,7 @@
 
 
 
-                        <!-- -----------------redess sociales------------------->
+                        <!-- -redess sociales-->
                         <div class="card-footer text-center">
                             <a class="card-link" href="http://www.facebook.com" target="">
                                 <span style="font-size: 2em;">
