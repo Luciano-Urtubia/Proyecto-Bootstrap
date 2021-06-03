@@ -115,7 +115,29 @@
     </div>
  <!-- seccion horas -->
    
-
+<div class="container">
+        <div class="bg_wrapper">
+            <h1>Random User Generator</h1>
+            <div class="refresh">Refresh me</div>
+        </div>
+        <div class="profile_card">
+            <div class="profile_header"></div>
+            <div class="user_img">
+                <img src="images/4.jpg">
+            </div>
+            <div class="title_info">Hi, My name is</div>
+            <div class="title_details">Maithili Jha</div>
+            <div class="info_icons">
+                <div class="icon user_ active" data-title="Hi, My name is" data-value="Maithili Jha"></div>
+                <div class="icon email_" data-title="My email address is" data-value="abcd@email.com"></div>
+                <div class="icon birthday_" data-title="My age is" data-value="7yrs"></div>
+                <div class="icon location_" data-title="My addres is" data-value="Mumbai"></div>
+                <div class="icon phone_" data-title="My phone number is " data-value="1234567890"></div>
+                <div class="icon password_" data-title="My password is" data-value="123456"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
 
 
   
@@ -362,6 +384,72 @@
         colorSwitch.addEventListener('change', switchColor, false);
 
     </script>
+
+<script>
+
+//https://randomuser.me/api/?gender=female
+
+//Recargar página
+ actualización  constante =  documento . querySelector ( ".refresh" ) ;
+refrescar . addEventListener ( "clic" ,  función  ( )  {
+    ubicación . recargar ( ) ;
+} )
+
+
+const  title_details_  =  documento . querySelector ( ".title_details" ) ;
+const  info_icons  =  documento . querySelector ( ".info_icons" ) ;
+const  user_img  =  documento . querySelector ( ".user_img" ) ;
+
+// obteniendo datos de la API
+buscar ( 'https://randomuser.me/api/?gender=female' )
+    . entonces ( respuesta  =>  respuesta . json ( ) )
+    . entonces ( función  ( datos )  {
+        //console.log(data);
+        dejar  userData  =  datos . resultados [ 0 ] ;
+        consola . log ( userData ) ;
+        let  imgSrc  =  `<img src =" $ { userData . imagen . grande } ">` ;
+        let  name_  =  ` $ { userData . nombre . first }  $ { userData . nombre . último } ` ;
+        dejar  content_  =  `
+        <div class = "icon user_ active" data-title = "Hola, Mi nombre es" data-value = " $ { userData . name . first }  $ { userData . name . last } "> </div>
+        <div class = "icon email_" data-title = "Mi dirección de correo electrónico es" data-value = " $ { userData . email } "> </div>
+        <div class = "icon birthday_" data-title = "Mi edad es" data-value = " $ { userData . dob . age } años"> </div>
+        <div class = "icon location_" data-title = "Mi dirección es" data-value = " $ { userData . location . country } "> </div>
+        <div class = "icon phone_" data-title = "Mi número de teléfono es" data-value = " $ { userData . cell } "> </div>
+        <div class = "icon password_" data-title = "Mi contraseña es" data-value = " $ { userData . login . password } "> </div>        
+        '
+        info_icons . innerHTML  =  content_ ;
+        user_img . innerHTML  =  imgSrc ;
+        title_details_ . innerHTML  =  nombre_ ;
+
+
+        // para pasar el mouse y cambiar los detalles
+         icono  const =  documento . querySelectorAll ( ".icon" ) ;
+        const  title_info  =  documento . querySelector ( ".title_info" ) ;
+        const  title_details  =  documento . querySelector ( ".title_details" ) ;
+
+        icono . forEach ( function  ( item )  {
+            artículo . addEventListener ( "mouseover" ,  function  ( )  {
+                deje  titleData  =  elemento . getAttribute ( "título de datos" ) ;
+                dejar  dataValue  =  item . getAttribute ( "valor-datos" ) ;
+
+                title_info . innerHTML  =  titleData ;
+                title_details . innerHTML  =  dataValue ;
+
+                deje  activeClass  =  documento . querySelectorAll ( ".active" ) ;
+
+                activeClass . forEach ( function  ( active_ )  {
+                    active_ . className  =  active_ . className . reemplazar ( "activo" ,  "" ) ;
+                } )
+                artículo . className  + =  "activo" ;
+
+            } ) ;
+        } )
+
+
+    } )</script>
+
+
+
 
 
 </body>
