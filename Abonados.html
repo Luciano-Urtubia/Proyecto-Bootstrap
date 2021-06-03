@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 
     <script src="../BOOTSTRAP/assets/js/bootstrap.bundle.min.js"></script>
+     <script src=""></script>
 
 
     <link rel="stylesheet" href="assets/css/estilospropios.css">
@@ -300,6 +301,7 @@
     <script src="../BOOTSTRAP/assets/js/jquery-3.5.1.slim.min.js"></script>
     <script src="../BOOTSTRAP/assets/js/popper.min.js"></script>
     <script src="../BOOTSTRAP/assets/js/bootstrap.min.js"></script>
+     <script src=""></script>
  
 
 <script>(function() {
@@ -386,68 +388,77 @@
 
     </script>
 
-<script>
-
-//https://randomuser.me/api/?gender=female
-
-//Recargar página
- actualización  constante =  documento . querySelector ( ".refresh" ) ;
-refrescar . addEventListener ( "clic" ,  función  ( )  {
-    ubicación . recargar ( ) ;
-} )
 
 
-const  title_details_  =  documento . querySelector ( ".title_details" ) ;
-const  info_icons  =  documento . querySelector ( ".info_icons" ) ;
-const  user_img  =  documento . querySelector ( ".user_img" ) ;
 
-// obteniendo datos de la API
-buscar ( 'https://randomuser.me/api/?gender=female' )
-    . entonces ( respuesta  =>  respuesta . json ( ) )
-    . entonces ( función  ( datos )  {
+      <script >
+
+
+
+    //https://randomuser.me/api/?gender=female
+
+//reload page
+const refresh = document.querySelector(".refresh");
+refresh.addEventListener("click", function () {
+    location.reload();
+})
+
+
+const title_details_ = document.querySelector(".title_details");
+const info_icons = document.querySelector(".info_icons");
+const user_img = document.querySelector(".user_img");
+
+//fetching api data
+fetch('https://randomuser.me/api/?gender=female,masculine')
+    .then(response => response.json())
+    .then(function (data) {
         //console.log(data);
-        dejar  userData  =  datos . resultados [ 0 ] ;
-        consola . log ( userData ) ;
-        let  imgSrc  =  `<img src =" $ { userData . imagen . grande } ">` ;
-        let  name_  =  ` $ { userData . nombre . first }  $ { userData . nombre . último } ` ;
-        dejar  content_  =  `
-        <div class = "icon user_ active" data-title = "Hola, Mi nombre es" data-value = " $ { userData . name . first }  $ { userData . name . last } "> </div>
-        <div class = "icon email_" data-title = "Mi dirección de correo electrónico es" data-value = " $ { userData . email } "> </div>
-        <div class = "icon birthday_" data-title = "Mi edad es" data-value = " $ { userData . dob . age } años"> </div>
-        <div class = "icon location_" data-title = "Mi dirección es" data-value = " $ { userData . location . country } "> </div>
-        <div class = "icon phone_" data-title = "Mi número de teléfono es" data-value = " $ { userData . cell } "> </div>
-        <div class = "icon password_" data-title = "Mi contraseña es" data-value = " $ { userData . login . password } "> </div>        
-        '
-        info_icons . innerHTML  =  content_ ;
-        user_img . innerHTML  =  imgSrc ;
-        title_details_ . innerHTML  =  nombre_ ;
+        let userData = data.results[0];
+        console.log(userData);
+        let imgSrc = `<img src="${userData.picture.large}">`;
+        let name_ = `${userData.name.first} ${userData.name.last}`;
+        let content_ = `
+        <div class="icon user_ active" data-title="Hi, My name is" data-value="${userData.name.first} ${userData.name.last}"></div>
+        <div class="icon email_" data-title="My email address is" data-value="${userData.email}"></div>
+        <div class="icon birthday_" data-title="My age is" data-value="${userData.dob.age}yrs"></div>
+        <div class="icon location_" data-title="My addres is" data-value="${userData.location.country}"></div>
+        <div class="icon phone_" data-title="My phone number is " data-value="${userData.cell}"></div>
+        <div class="icon password_" data-title="My password is" data-value="${userData.login.password}"></div>        
+        `
+        info_icons.innerHTML = content_;
+        user_img.innerHTML = imgSrc;
+        title_details_.innerHTML = name_;
 
 
-        // para pasar el mouse y cambiar los detalles
-         icono  const =  documento . querySelectorAll ( ".icon" ) ;
-        const  title_info  =  documento . querySelector ( ".title_info" ) ;
-        const  title_details  =  documento . querySelector ( ".title_details" ) ;
+        //for hover and change details
+        const icon = document.querySelectorAll(".icon");
+        const title_info = document.querySelector(".title_info");
+        const title_details = document.querySelector(".title_details");
 
-        icono . forEach ( function  ( item )  {
-            artículo . addEventListener ( "mouseover" ,  function  ( )  {
-                deje  titleData  =  elemento . getAttribute ( "título de datos" ) ;
-                dejar  dataValue  =  item . getAttribute ( "valor-datos" ) ;
+        icon.forEach(function (item) {
+            item.addEventListener("mouseover", function () {
+                let titleData = item.getAttribute("data-title");
+                let dataValue = item.getAttribute("data-value");
 
-                title_info . innerHTML  =  titleData ;
-                title_details . innerHTML  =  dataValue ;
+                title_info.innerHTML = titleData;
+                title_details.innerHTML = dataValue;
 
-                deje  activeClass  =  documento . querySelectorAll ( ".active" ) ;
+                let activeClass = document.querySelectorAll(".active");
 
-                activeClass . forEach ( function  ( active_ )  {
-                    active_ . className  =  active_ . className . reemplazar ( "activo" ,  "" ) ;
-                } )
-                artículo . className  + =  "activo" ;
+                activeClass.forEach(function (active_) {
+                    active_.className = active_.className.replace(" active", "");
+                })
+                item.className += " active";
 
-            } ) ;
-        } )
+            });
+        })
 
 
-    } )</script>
+    })
+
+    </script>
+
+
 
 
 
