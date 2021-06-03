@@ -29,7 +29,7 @@
     border: 5px solid #007bff;
 }
 
-#card {
+.card {
     background-color: #343a40;
     color: rgb(239, 237, 245);
 }
