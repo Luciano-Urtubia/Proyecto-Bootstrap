@@ -22,11 +22,11 @@
 }
 
 .footer a:hover {
-    color: #fafdff;
+    color: #007bff;
 }
 
 #card :hover {
-    border: 5px solid #dde1e6;
+    border: 5px solid #007bff;
 }
 
 .card {
