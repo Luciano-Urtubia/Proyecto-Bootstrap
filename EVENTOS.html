@@ -426,7 +426,21 @@
         </div>
     </div>
 
-
+  <div class="container mt-4 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">visualización divisas UF / Dólar / Euro</h3>
+            </div>
+            <div class="card-body">
+                <p class="card-text" id="valorUF"></p>
+                <p class="card-text" id="valorDolar"></p>
+                <p class="card-text" id="valorEuro"></p>
+            </div>
+            <div class="card-footer">
+                <a href="https://mindicador.cl/" class="card-link" target="_blank">mindicador.cl</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Section -->
 
@@ -557,11 +571,26 @@
     <script src="../BOOTSTRAP/assets/js/bootstrap.min.js"></script>
 
 
+<script>
 
+$(document).ready(function() {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open ('GET','https://mindicador.cl/api', true)
+    xmlHttp.send();
 
+    xmlHttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200)
+        {
+            var data = JSON.parse(this.responseText);
+            document.getElementById("valorUF").innerHTML = data.uf.nombre + ": " + new Intl.NumberFormat('es-CL',{style:'currency',currency:'CLP',maximumFractionDigits:2}).format(data.uf.valor);
+            document.getElementById("valorDolar").innerHTML = data.dolar.nombre + ": " + new Intl.NumberFormat('es-CL',{style:'currency',currency:'CLP',maximumFractionDigits:2}).format(data.dolar.valor);
+            document.getElementById("valorEuro").innerHTML = data.euro.nombre + ": " + new Intl.NumberFormat('es-CL',{style:'currency',currency:'CLP',maximumFractionDigits:2}).format(data.euro.valor);
+        }
+        
+    };
+});
 
-
-
+</script>
 
 
 </body>
