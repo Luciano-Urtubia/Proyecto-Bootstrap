@@ -34,6 +34,11 @@
     color: rgb(239, 237, 245);
 }
 
+.card-body-1 {
+    background-color: #99b0c9;
+    color: rgb(239, 237, 245);
+}
+
 * {
     box-sizing: border-box;
 }
