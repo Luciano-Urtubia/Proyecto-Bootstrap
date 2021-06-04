@@ -469,7 +469,7 @@
         <option value="3">Euro</option>
     </select><br>
     <br>
-    <hr id="resultado">Conversión: $0.00</hr>
+    <h1 id="resultado">Conversión: $0.00</h1>
     </center>
 
 
@@ -688,7 +688,7 @@ $(document).ready(function() {
         resultado = valor;
     }
 
-    document.getElementById("resultado").innerHTML = resultado.toFixed(2);
+    document.getElementById("resultado").innerHTML = "Conversion: $" + resultado.toFixed(2);
 
 }
  </script>
