@@ -33,7 +33,7 @@
     right: 60px;
     width: 150px;
     height: 45px;
-    background-color: #22ab39;
+    background-color: #bdbdbd;
     text-transform: uppercase;
     line-height: 45px;
     text-align: center;
@@ -54,7 +54,7 @@
 }
 
 .container .profile_card .profile_header {
-    background-color: #eee;
+    background-color: #22ab39;
     border-bottom: 1px solid #bdbdbd;
     padding: 50px;
 }
