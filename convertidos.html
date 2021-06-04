@@ -105,7 +105,7 @@
     onchange="convertir()">
     <span id="valor">0</span><br>
     <br>
-    Convertir de:
+    Convertir De:
     <select id="de" onchange="Convertir()">
         <option value="1">Peso CL</option>
         <option value="2">US Dólar</option>
@@ -113,15 +113,14 @@
     </select><br>
     <br>
     Convertir A:
-    <select id="de" onchange="Convertir()">
+    <select id="a" onchange="Convertir()">
         <option value="1">Peso CL</option>
         <option value="2">US Dólar</option>
         <option value="3">Euro</option>
     </select><br>
     <br>
-    <hr id="resultado">Conversión: $ 0.00</hr>
+    <hr id="resultado">Conversión: $0.00</hr>
     </center>
-
 
 
 
@@ -273,9 +272,9 @@
     </script>
 
 <script>
-    function convertir(){
+   function convertir(){
     var valor = parseFloat(document.getElementById("cantidad").value);
-    document.getElementById("valor").innerHTML = "<b>"+valor+"</b>";
+    document.getElementById("valor").innerHTML = valor;
     de = document.getElementById("de").value;
     a = document.getElementById("a").value;
     dolar = 719.00;
@@ -330,11 +329,9 @@
         resultado = valor;
     }
 
-    document.getElementById("resultado").innerHTML = "Conversion: $"+valor.toFixed(2);
+    document.getElementById("resultado").innerHTML = resultado.toFixed(2);
 
 }
-
-Enviar mensaje a #notas-recursos
  </script>
 
 
