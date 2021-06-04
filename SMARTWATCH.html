@@ -238,7 +238,29 @@
 
     <!--galeria fin  -->
 
+   <div class="wrap mt-4  ">
+  <div class="widget mt-4 ">
+    <div class="fecha mt-4">
+      <p id="diaSemana" class="diaSemana">Martes</p>
+      <p id="dia" class="dia">27</p>
+      <p>de </p>
+      <p id="mes" class="mes">Octubre</p>
+      <p>del </p>
+      <p id="year" class="year">2015</p>
+    </div>
 
+    <div class="reloj mt-4">
+      <p id="horas" class="horas">11</p>
+      <p>:</p>
+      <p id="minutos" class="minutos">48</p>
+      <p>:</p>
+      <div class="caja-segundos">
+        <p id="ampm" class="ampm">AM</p>
+        <p id="segundos" class="segundos">12</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -375,7 +397,20 @@
 
 
 
+<script>
+        const colorSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
+        function switchColor(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+            else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        }
+        colorSwitch.addEventListener('change', switchColor, false);
+
+    </script>
 
 
 
