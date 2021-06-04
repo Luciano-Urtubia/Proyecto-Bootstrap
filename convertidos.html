@@ -99,7 +99,28 @@
 
     <!--galeria 1 -->
   
-
+<center>
+    <h1 class="title">Convertidor de Divisas</h1>
+    Cantidad <input type="range" id="cantidad" min="0" max="10000" value="0"
+    onchange="convertir()">
+    <span id="valor">0</span><br>
+    <br>
+    Convertir de:
+    <select id="de" onchange="Convertir()">
+        <option value="1">Peso CL</option>
+        <option value="2">US Dólar</option>
+        <option value="3">Euro</option>
+    </select><br>
+    <br>
+    Convertir A:
+    <select id="de" onchange="Convertir()">
+        <option value="1">Peso CL</option>
+        <option value="2">US Dólar</option>
+        <option value="3">Euro</option>
+    </select><br>
+    <br>
+    <hr id="resultado">Conversión: $ 0.00</hr>
+    </center>
 
 
 
@@ -250,6 +271,70 @@
         colorSwitch.addEventListener('change', switchColor, false);
 
     </script>
+
+<script>
+    function convertir(){
+    var valor = parseFloat(document.getElementById("cantidad").value);
+    document.getElementById("valor").innerHTML = "<b>"+valor+"</b>";
+    de = document.getElementById("de").value;
+    a = document.getElementById("a").value;
+    dolar = 719.00;
+    euro = 871.53;
+    resultado = 0;
+
+    //Conversión de Peso a Dólar
+
+    if (de==1&&a==2)
+    {
+        resultado = valor/dolar;
+    }
+
+    //Conversion de Peso a Euro
+
+    else if(de==1&&a==3)
+    {
+        resultado = valor/euro;
+    }
+
+    //Conversion de Dólar a Peso
+
+    else if(de==2&&a==1)
+    {
+        resultado = valordolar;
+    }
+
+    //Conversión de Dólar a Euro
+
+    else if(de==2&&a==3)
+    {
+        resultado = valor(dolar/euro);
+    }
+
+    //Conversión de Euro a Peso
+
+    else if(de==3&&a==1)
+    {
+        resultado = valoreuro;
+    }
+
+    //Conversión de Euro a Dólar
+
+    else if(de==3&&a==2)
+    {
+        resultado = valor(euro/dolar);
+    }
+
+    //Conversión de Peso a Peso, Dólar a Dólar y Euro a Euro
+
+    else{
+        resultado = valor;
+    }
+
+    document.getElementById("resultado").innerHTML = "Conversion: $"+valor.toFixed(2);
+
+}
+
+Enviar mensaje a #notas-recursos </script>
 
 
 
