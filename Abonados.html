@@ -365,7 +365,7 @@
         pHoras.textContent = horas;
         pAMPM.textContent = ampm;
 
-        // Minutos y Segundos
+ 
         if (minutos < 10) { minutos = "0" + minutos; }
         if (segundos < 10) { segundos = "0" + segundos; }
 
@@ -401,9 +401,9 @@
 
 
 
-    //https://randomuser.me/api/?gender=female
 
-//reload page
+
+
 const refresh = document.querySelector(".refresh");
 refresh.addEventListener("click", function () {
     location.reload();
@@ -414,11 +414,11 @@ const title_details_ = document.querySelector(".title_details");
 const info_icons = document.querySelector(".info_icons");
 const user_img = document.querySelector(".user_img");
 
-//fetching api data
+
 fetch('https://randomuser.me/api/?gender=female,masculine')
     .then(response => response.json())
     .then(function (data) {
-        //console.log(data);
+      
         let userData = data.results[0];
         console.log(userData);
         let imgSrc = `<img src="${userData.picture.large}">`;
@@ -436,7 +436,7 @@ fetch('https://randomuser.me/api/?gender=female,masculine')
         title_details_.innerHTML = name_;
 
 
-        //for hover and change details
+   
         const icon = document.querySelectorAll(".icon");
         const title_info = document.querySelector(".title_info");
         const title_details = document.querySelector(".title_details");
